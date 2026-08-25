@@ -16,7 +16,7 @@ class ShowApplyCubit extends Cubit<ShowApplyState> {
     try {
       emit(ShowApplyLoading());
       if (userId == null) {
-        emit(ShowApplySuccess(model: []));
+        emit(ShowApplySuccess(model: const []));
         return;
       }
       var response = await Api().get(url: '/apply/$userId', token: saveToken);

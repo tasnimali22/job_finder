@@ -8,17 +8,15 @@ class ErrorModel {
   ErrorModel.fromJson(Map<String, dynamic> json) {
     statusCode = json['statusCode'];
     message = json['message'];
-    errors = json['errors'] != null
-        ? new Errors.fromJson(json['errors'])
-        : null;
+    errors = json['errors'] != null ? Errors.fromJson(json['errors']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['statusCode'] = this.statusCode;
-    data['message'] = this.message;
-    if (this.errors != null) {
-      data['errors'] = this.errors!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['statusCode'] = statusCode;
+    data['message'] = message;
+    if (errors != null) {
+      data['errors'] = errors!.toJson();
     }
     return data;
   }
@@ -40,8 +38,8 @@ class Errors {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    if (this.fields != null) {
-      data.addAll(this.fields!);
+    if (fields != null) {
+      data.addAll(fields!);
     }
     return data;
   }

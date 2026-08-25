@@ -6,7 +6,7 @@ import 'package:jobs_que_app/features/screen_tabbar/applied_view/presentation/vi
 import 'package:jobs_que_app/features/screen_tabbar/applied_view/data/show_apply_cubit/show_apply_cubit.dart';
 import 'package:jobs_que_app/features/screen_tabbar/home-view/view/home_body.dart';
 import 'package:jobs_que_app/features/screen_tabbar/message_view/view/massage_view.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/Profile.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/profile.dart';
 import 'package:jobs_que_app/features/screen_tabbar/saved_view/saved.dart';
 
 class BottomNavigaterBar extends StatefulWidget {
@@ -19,8 +19,8 @@ class BottomNavigaterBar extends StatefulWidget {
 class _BottomNavigaterBarState extends State<BottomNavigaterBar> {
   int currectindex = 0;
   List<Widget> widgets = [
-    HomeBody(),
-    MassageView(),
+    const HomeBody(),
+    const MassageView(),
     const ShowApply(),
     const SavedView(),
     const Profile(),
@@ -46,14 +46,11 @@ class _BottomNavigaterBarState extends State<BottomNavigaterBar> {
         selectedLabelStyle: AppTextStyles.textXSMediump,
         elevation: 0,
 
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined, color: AppColors.neutral400),
             label: "Home",
-            activeIcon: const Icon(
-              Icons.home_filled,
-              color: AppColors.primary500,
-            ),
+            activeIcon: Icon(Icons.home_filled, color: AppColors.primary500),
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -61,7 +58,7 @@ class _BottomNavigaterBarState extends State<BottomNavigaterBar> {
               color: AppColors.neutral400,
             ),
             label: "massage",
-            activeIcon: const Icon(
+            activeIcon: Icon(
               Icons.messenger_outlined,
               color: AppColors.primary500,
             ),
@@ -69,7 +66,7 @@ class _BottomNavigaterBarState extends State<BottomNavigaterBar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.work_outline_rounded, color: AppColors.neutral400),
             label: "Applied",
-            activeIcon: const Icon(Icons.work, color: AppColors.primary500),
+            activeIcon: Icon(Icons.work, color: AppColors.primary500),
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -77,7 +74,7 @@ class _BottomNavigaterBarState extends State<BottomNavigaterBar> {
               color: AppColors.neutral400,
             ),
             label: "Saved",
-            activeIcon: const Icon(
+            activeIcon: Icon(
               Icons.bookmark_outlined,
               color: AppColors.primary500,
             ),
@@ -88,7 +85,7 @@ class _BottomNavigaterBarState extends State<BottomNavigaterBar> {
               color: AppColors.neutral400,
             ),
             label: "profile",
-            activeIcon: const Icon(Icons.person, color: AppColors.primary500),
+            activeIcon: Icon(Icons.person, color: AppColors.primary500),
           ),
         ],
       ),

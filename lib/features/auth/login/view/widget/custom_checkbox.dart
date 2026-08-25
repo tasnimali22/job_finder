@@ -13,10 +13,10 @@ class CustomCheckBox extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        CheckBoxRemeber(),
+        const CheckBoxRemeber(),
         SizedBox(width: 2.w),
         Text("Remember me", style: AppTextStyles.textMRegular),
-        Spacer(),
+        const Spacer(),
         TextButton(
           onPressed: () {
             GoRouter.of(context).push(AppRouter.kSignUp);

@@ -38,7 +38,7 @@ class Login extends StatelessWidget {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CustomAppBarView(),
+                      const CustomAppBarView(),
                       Text("Login", style: AppTextStyles.heading2Medium),
                       Text(
                         "Please login to find your dream job",
@@ -47,7 +47,7 @@ class Login extends StatelessWidget {
                       SizedBox(height: 58.h),
 
                       FormLogin(formKey: formKey),
-                      CustomCheckBox(),
+                      const CustomCheckBox(),
 
                       SizedBox(height: 20.h),
                       Row(
@@ -87,6 +87,7 @@ class Login extends StatelessWidget {
             onPressed: () async {
               if (formKey.currentState!.validate()) {
                 await context.read<SigninCubit>().signIn();
+                // ignore: use_build_context_synchronously
                 GoRouter.of(context).push(AppRouter.kHome);
               }
             },

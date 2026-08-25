@@ -16,46 +16,46 @@ class IntroductionOne extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
       child: Column(
         children: [
-          CustomAppBar(),
+          const CustomAppBar(),
           Image.asset(AssetImageData.intro1, fit: BoxFit.contain),
-          Spacer(),
+          const Spacer(),
 
           RichText(
             text: TextSpan(
               style: AppTextStyles.heading1Medium,
               children: [
-                TextSpan(text: "Find a job, and "),
+                const TextSpan(text: "Find a job, and "),
                 TextSpan(
                   text: "start building ",
                   style: AppTextStyles.heading1Mediumb,
                 ),
-                TextSpan(text: "your career from now on "),
+                const TextSpan(text: "your career from now on "),
               ],
             ),
           ),
 
-          Spacer(),
+          const Spacer(),
 
           Text(
             "Explore over 25,924 available job roles and upgrade your operator now.",
             style: AppTextStyles.textLRegularN,
             textAlign: TextAlign.center,
           ),
-          Spacer(),
+          const Spacer(),
 
           CardSmoothPageIndictor(controller: _controller),
-          Spacer(),
+          const Spacer(),
 
           CustomBotton(
             text: "Next",
             onPressed: () {
               _controller.nextPage(
-                duration: Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 200),
                 curve: Curves.easeInOut,
               );
             },
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

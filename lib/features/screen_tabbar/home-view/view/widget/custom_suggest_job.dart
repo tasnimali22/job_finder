@@ -71,7 +71,10 @@ class CustomSuggestJob extends StatelessWidget {
               IconButton(
                 padding: EdgeInsets.zero,
                 onPressed: () {},
-                icon: Icon(Icons.bookmark_border_rounded, color: Colors.white),
+                icon: const Icon(
+                  Icons.bookmark_border_rounded,
+                  color: Colors.white,
+                ),
               ),
             ],
           ),
@@ -92,10 +95,7 @@ class CustomSuggestJob extends StatelessWidget {
                   backgroundColor: AppColors.primary500,
                 ),
                 onPressed: () {
-                  GoRouter.of(context).push(
-                    AppRouter.kApplyJob,
-                    extra: jobId,
-                  );
+                  GoRouter.of(context).push(AppRouter.kApplyJob, extra: jobId);
                 },
                 child: Text("Apply now", style: AppTextStyles.textSMediumw),
               ),

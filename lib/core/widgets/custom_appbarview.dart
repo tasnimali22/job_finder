@@ -18,7 +18,10 @@ class CustomAppBarView extends StatelessWidget {
             onPressed: () {
               GoRouter.of(context).pop();
             },
-            icon: Icon(Icons.arrow_back_rounded, color: AppColors.neutral550),
+            icon: const Icon(
+              Icons.arrow_back_rounded,
+              color: AppColors.neutral550,
+            ),
           ),
           Image.asset(
             AssetImageData.logo,

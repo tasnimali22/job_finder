@@ -8,9 +8,8 @@ class JobApplyStepper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        // الخطوة 1: البيانات الشخصية
         Expanded(
           child: StepperStep(
             title: 'Biodata',

@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:jobs_que_app/core/util/app_colors.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/widgets/fieldlabel.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
@@ -94,7 +95,7 @@ class _EditProfileState extends State<EditProfile> {
             ),
           ),
           const SizedBox(height: 28),
-          const _FieldLabel('Full name'),
+          const FieldLabel('Full name'),
           const SizedBox(height: 8),
           TextField(
             controller: _nameController,
@@ -105,7 +106,7 @@ class _EditProfileState extends State<EditProfile> {
             ),
           ),
           const SizedBox(height: 20),
-          const _FieldLabel('Bio'),
+          const FieldLabel('Bio'),
           const SizedBox(height: 8),
           TextField(
             controller: _bioController,
@@ -116,7 +117,7 @@ class _EditProfileState extends State<EditProfile> {
             ),
           ),
           const SizedBox(height: 20),
-          const _FieldLabel('Address'),
+          const FieldLabel('Address'),
           const SizedBox(height: 8),
           TextField(
             controller: _addressController,
@@ -126,10 +127,10 @@ class _EditProfileState extends State<EditProfile> {
             ),
           ),
           const SizedBox(height: 20),
-          const _FieldLabel('Country'),
+          const FieldLabel('Country'),
           const SizedBox(height: 8),
           DropdownButtonFormField<String>(
-            value: _selectedCountry,
+            initialValue: _selectedCountry,
             decoration: const InputDecoration(
               prefixIcon: Icon(Icons.public_rounded),
             ),
@@ -150,23 +151,6 @@ class _EditProfileState extends State<EditProfile> {
             label: const Text('Save changes'),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _FieldLabel extends StatelessWidget {
-  const _FieldLabel(this.text);
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        color: AppColors.neutral600,
-        fontWeight: FontWeight.w700,
       ),
     );
   }

@@ -21,7 +21,7 @@ class CardSmoothPageIndictor extends StatelessWidget {
       onDotClicked: (index) {
         controller.animateToPage(
           index,
-          duration: Duration(milliseconds: 200),
+          duration: const Duration(milliseconds: 200),
           curve: Curves.linear,
         );
       },

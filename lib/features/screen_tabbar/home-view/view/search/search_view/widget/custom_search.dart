@@ -21,10 +21,10 @@ class CustomSearch extends StatelessWidget {
       onSubmitted: onSubmitted,
       decoration: InputDecoration(
         hintStyle: AppTextStyles.textMRegularn,
-        contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 0),
-        disabledBorder: OutlineInputBorder(),
+        contentPadding: const EdgeInsets.symmetric(vertical: 2, horizontal: 0),
+        disabledBorder: const OutlineInputBorder(),
         hintText: text,
-        prefixIcon: Icon(Icons.search),
+        prefixIcon: const Icon(Icons.search),
 
         focusedBorder: outLineInput(),
 
@@ -37,7 +37,7 @@ class CustomSearch extends StatelessWidget {
   OutlineInputBorder outLineInput() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(27.r),
-      borderSide: BorderSide(color: AppColors.neutral300),
+      borderSide: const BorderSide(color: AppColors.neutral300),
     );
   }
 }

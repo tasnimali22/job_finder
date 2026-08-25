@@ -37,8 +37,6 @@ class SearchView extends StatelessWidget {
                         return ListView.builder(
                           itemCount: state.searchmodel.length,
                           itemBuilder: (BuildContext context, int index) {
-                            final item = state.searchmodel[index];
-
                             return ListTile(
                               onTap: () {
                                 context.read<SearchCubit>().search(
@@ -48,12 +46,12 @@ class SearchView extends StatelessWidget {
                                   context,
                                 ).push(AppRouter.kDetailsSearch);
                               },
-                              leading: Icon(
+                              leading: const Icon(
                                 Icons.settings_backup_restore_outlined,
                                 color: AppColors.neutral400,
                               ),
                               title: Text(state.searchmodel[index].name ?? ""),
-                              trailing: Icon(
+                              trailing: const Icon(
                                 Icons.arrow_circle_right_outlined,
                                 color: AppColors.information600,
                               ),
@@ -61,9 +59,9 @@ class SearchView extends StatelessWidget {
                           },
                         );
                       } else if (state is SearchFalidedState) {
-                        return Text("not Found");
+                        return const Text("not Found");
                       } else {
-                        return CustomCircleIndicator();
+                        return const CustomCircleIndicator();
                       }
                     },
                   ),

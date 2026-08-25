@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:jobs_que_app/core/util/app_colors.dart';
 import 'package:jobs_que_app/core/util/app_style.dart';
-import 'package:jobs_que_app/features/auth/create_account/data/cubit/sign_up_cubit.dart';
 import 'package:jobs_que_app/features/auth/create_account/view/widget/custom_text_filed.dart';
 import 'package:jobs_que_app/features/screen_tabbar/applied_view/data/apply_cubit/apply_cubit.dart';
 
@@ -23,7 +22,7 @@ class FormApplyedJob extends StatelessWidget {
           SizedBox(height: 20.h),
           Text("Full Name", style: AppTextStyles.textLRegular),
           CustomTextFiled(
-            prefixIcon: Icon(Icons.person_outline_rounded),
+            prefixIcon: const Icon(Icons.person_outline_rounded),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return "Please enter your name";
@@ -38,7 +37,7 @@ class FormApplyedJob extends StatelessWidget {
           Text("Email", style: AppTextStyles.textLRegular),
 
           CustomTextFiled(
-            prefixIcon: Icon(Icons.email_outlined),
+            prefixIcon: const Icon(Icons.email_outlined),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return "Please enter your email";
@@ -63,11 +62,11 @@ class FormApplyedJob extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(color: AppColors.primary400),
+                borderSide: const BorderSide(color: AppColors.primary400),
               ),
               disabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(color: AppColors.neutral300),
+                borderSide: const BorderSide(color: AppColors.neutral300),
               ),
             ),
             controller: context.read<ApplyCubit>().phoneController,

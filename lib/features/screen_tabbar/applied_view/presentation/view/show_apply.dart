@@ -35,10 +35,10 @@ class _ShowApplyState extends State<ShowApply> {
           padding: EdgeInsets.only(right: 24.w, left: 24.w, bottom: 40.h),
           child: Column(
             children: [
-              CustomAppbarapply(text: 'Apply Job'),
+              const CustomAppbarapply(text: 'Apply Job'),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 24.h),
-                child: CustomCardTapBar(tap1: 'Active', tap2: 'Rejected'),
+                child: const CustomCardTapBar(tap1: 'Active', tap2: 'Rejected'),
               ),
               Expanded(
                 child: TabBarView(
@@ -61,7 +61,7 @@ class _ShowApplyState extends State<ShowApply> {
                       },
                     ),
 
-                    Rejected(),
+                    const Rejected(),
                   ],
                 ),
               ),

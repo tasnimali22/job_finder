@@ -35,7 +35,7 @@ class JobCardWidget extends StatelessWidget {
                 ),
                 child: Image.network(
                   job.image ?? "",
-                  errorBuilder: (_, __, ___) => const Icon(Icons.work),
+                  errorBuilder: (_, _, _) => const Icon(Icons.work),
                 ),
               ),
               const SizedBox(width: 12),
@@ -71,7 +71,7 @@ class JobCardWidget extends StatelessWidget {
           SizedBox(height: 20.h),
 
           // 3. Progress Stepper
-          JobApplyStepper(currentStep: 2),
+          const JobApplyStepper(currentStep: 2),
         ],
       ),
     );

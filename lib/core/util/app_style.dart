@@ -37,17 +37,17 @@ abstract class AppTextStyles {
   // Heading 2 (28px)
   static TextStyle heading2Regular = TextStyle(
     fontFamily: _fontFamily,
-    fontSize: 28.0,
+    fontSize: 28.0.sp,
     fontWeight: _regular,
   );
   static TextStyle heading2Medium = TextStyle(
     fontFamily: _fontFamily,
-    fontSize: 28.0,
+    fontSize: 28.sp,
     fontWeight: _medium,
   );
   static TextStyle heading2Bold = TextStyle(
     fontFamily: _fontFamily,
-    fontSize: 28.0,
+    fontSize: 28.0.sp,
     fontWeight: _bold,
   );
 

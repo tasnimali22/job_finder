@@ -14,6 +14,7 @@ class OtpCubit extends Cubit<OtpTimerState> {
     String? saveToken = prefs.getString("token");
     emit(OtpTimerLoading());
     try {
+      // ignore: unused_local_variable
       var response = await Api().post(
         url: "/auth/otp",
         body: {"email": email, "otp": otp},

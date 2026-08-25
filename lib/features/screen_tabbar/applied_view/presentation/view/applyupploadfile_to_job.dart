@@ -36,6 +36,7 @@ class _ApplyUpploadFileJobState extends State<ApplyUpploadFileJob> {
   Future<void> _pickFiles() async {
     setState(() => _isPicking = true);
     final result = await FilePicker.pickFiles(
+      // ignore: deprecated_member_use
       allowMultiple: true,
       type: FileType.custom,
       allowedExtensions: ['pdf', 'doc', 'docx', 'png', 'jpg', 'jpeg'],
@@ -125,8 +126,8 @@ class _ApplyUpploadFileJobState extends State<ApplyUpploadFileJob> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomAppbarapply(text: 'Apply job'),
-                  JobApplyStepper(currentStep: 2),
+                  const CustomAppbarapply(text: 'Apply job'),
+                  const JobApplyStepper(currentStep: 2),
                   Text("Upload portfolio", style: AppTextStyles.heading4Medium),
                   Text(
                     "Fill in your bio data correctly",

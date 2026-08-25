@@ -4,9 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:jobs_que_app/core/util/app_colors.dart';
 import 'package:jobs_que_app/features/screen_tabbar/message_view/data/manger/cubit/get_cubit_cubit.dart';
 import 'package:jobs_que_app/features/screen_tabbar/message_view/data/model/get_message.dart';
-import 'package:jobs_que_app/features/screen_tabbar/message_view/view/widget/customchat_buble.dart';
-
-import 'widget/customChatLeft.dart' show ChatbubleForfrind;
+import 'package:jobs_que_app/features/screen_tabbar/message_view/view/widget/custom_chat_buble.dart';
+import 'package:jobs_que_app/features/screen_tabbar/message_view/view/widget/custom_chat_left.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key});
@@ -49,13 +48,13 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text("company"),
+        title: const Text("company"),
         centerTitle: true,
         leading: IconButton(
           onPressed: () {
             GoRouter.of(context).pop;
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: Column(
@@ -87,10 +86,10 @@ class _ChatPageState extends State<ChatPage> {
                 hintText: "Send message",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: BorderSide(color: AppColors.primary500),
+                  borderSide: const BorderSide(color: AppColors.primary500),
                 ),
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.send),
+                  icon: const Icon(Icons.send),
                   onPressed: () => _sendMessage(context),
                 ),
 

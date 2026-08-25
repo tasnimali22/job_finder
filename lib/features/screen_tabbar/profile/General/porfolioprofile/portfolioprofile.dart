@@ -16,6 +16,7 @@ class _PortfolioProfileState extends State<PortfolioProfile> {
   Future<void> _pickFiles() async {
     setState(() => _isPicking = true);
     final result = await FilePicker.pickFiles(
+      // ignore: deprecated_member_use
       allowMultiple: true,
       type: FileType.custom,
       allowedExtensions: ['pdf', 'doc', 'docx', 'png', 'jpg', 'jpeg'],

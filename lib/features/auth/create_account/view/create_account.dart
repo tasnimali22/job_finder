@@ -8,7 +8,6 @@ import 'package:jobs_que_app/core/widgets/custom_appbarview.dart';
 import 'package:jobs_que_app/core/widgets/custom_button.dart';
 import 'package:jobs_que_app/features/auth/create_account/data/cubit/sign_up_cubit.dart';
 import 'package:jobs_que_app/features/auth/create_account/view/widget/formsignup.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: must_be_immutable
 class CreateAccount extends StatelessWidget {
@@ -29,7 +28,7 @@ class CreateAccount extends StatelessWidget {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomAppBarView(),
+                    const CustomAppBarView(),
                     Text(
                       "Cereate Account",
                       style: AppTextStyles.heading2Medium,
@@ -77,8 +76,10 @@ class CreateAccount extends StatelessWidget {
               final signUpCubit = context.read<SignUpCubit>();
               await signUpCubit.signUp();
 
+              // ignore: use_build_context_synchronously
               GoRouter.of(context).push(
                 AppRouter.kHome,
+                // ignore: use_build_context_synchronously
                 extra: context.read<SignUpCubit>().nameController,
               );
             }

@@ -28,14 +28,14 @@ class GetMessageModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['massage'] = this.massage;
-    data['user_id'] = this.userId;
-    data['comp_id'] = this.compId;
-    data['sender_user'] = this.senderUser;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['massage'] = massage;
+    data['user_id'] = userId;
+    data['comp_id'] = compId;
+    data['sender_user'] = senderUser;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }

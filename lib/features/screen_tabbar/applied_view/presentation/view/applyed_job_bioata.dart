@@ -27,8 +27,8 @@ class ApplyedJobBioata extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomAppbarapply(text: 'Apply job'),
-                  JobApplyStepper(currentStep: 1),
+                  const CustomAppbarapply(text: 'Apply job'),
+                  const JobApplyStepper(currentStep: 1),
                   Text("Biodata", style: AppTextStyles.heading4Medium),
                   Text(
                     "Fill in your bio data correctly",

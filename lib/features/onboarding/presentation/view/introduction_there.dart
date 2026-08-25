@@ -18,35 +18,35 @@ class IntroductionThere extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
       child: Column(
         children: [
-          CustomAppBar(),
+          const CustomAppBar(),
           Image.asset(AssetImageData.intro3, fit: BoxFit.contain),
-          Spacer(),
+          const Spacer(),
 
           RichText(
             text: TextSpan(
               style: AppTextStyles.heading1Medium,
               children: [
-                TextSpan(text: "Get the best "),
+                const TextSpan(text: "Get the best "),
                 TextSpan(
                   text: "choice for the job ",
                   style: AppTextStyles.heading1Mediumb,
                 ),
-                TextSpan(text: " you've always dreamed of "),
+                const TextSpan(text: " you've always dreamed of "),
               ],
             ),
           ),
 
-          Spacer(),
+          const Spacer(),
 
           Text(
             "Get the best choice for the job you've always dreamed of",
             style: AppTextStyles.textLRegularN,
             textAlign: TextAlign.center,
           ),
-          Spacer(),
+          const Spacer(),
 
           CardSmoothPageIndictor(controller: controller),
-          Spacer(),
+          const Spacer(),
 
           CustomBotton(
             text: "Get Started",
@@ -54,7 +54,7 @@ class IntroductionThere extends StatelessWidget {
               GoRouter.of(context).push(AppRouter.kLogin);
             },
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

@@ -157,7 +157,7 @@ class _HelpCenterState extends State<HelpCenter> {
               }),
           if (_faqs.every(
             (faq) =>
-                !_searchText.isEmpty &&
+                _searchText.isNotEmpty &&
                 !faq.question.toLowerCase().contains(_searchText),
           ))
             const Padding(

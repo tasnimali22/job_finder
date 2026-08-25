@@ -13,8 +13,8 @@ class _CheckBoxRemeberState extends State<CheckBoxRemeber> {
   @override
   Widget build(BuildContext context) {
     return Checkbox(
-      fillColor: WidgetStatePropertyAll(Color(0xFF3F80FF)),
-      visualDensity: VisualDensity(horizontal: -4, vertical: -4),
+      fillColor: const WidgetStatePropertyAll(Color(0xFF3F80FF)),
+      visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
       value: true,
       onChanged: (value) {
         setState(() {

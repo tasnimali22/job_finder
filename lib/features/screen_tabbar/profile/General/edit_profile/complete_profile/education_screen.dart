@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobs_que_app/core/util/app_colors.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/widgets/field.dart';
 
 class Education extends StatefulWidget {
   const Education({super.key});
@@ -61,24 +62,24 @@ class _EducationState extends State<Education> {
             style: TextStyle(color: AppColors.neutral600),
           ),
           const SizedBox(height: 24),
-          _Field(
+          Field(
             label: 'University *',
             controller: _universityController,
             hint: 'University name',
           ),
-          _Field(
+          Field(
             label: 'Degree or title *',
             controller: _titleController,
             hint: 'Bachelor of Art and Design',
           ),
-          _Field(
+          Field(
             label: 'Start year',
             controller: _startYearController,
             hint: 'YYYY',
             icon: Icons.date_range_outlined,
             onIconTap: () => _pickYear(_startYearController),
           ),
-          _Field(
+          Field(
             label: 'End year',
             controller: _endYearController,
             hint: 'YYYY',
@@ -90,51 +91,6 @@ class _EducationState extends State<Education> {
             onPressed: _save,
             icon: const Icon(Icons.check_rounded),
             label: const Text('Save education'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _Field extends StatelessWidget {
-  const _Field({
-    required this.label,
-    required this.controller,
-    required this.hint,
-    this.icon,
-    this.onIconTap,
-  });
-
-  final String label;
-  final TextEditingController controller;
-  final String hint;
-  final IconData? icon;
-  final VoidCallback? onIconTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 18),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            label,
-            style: const TextStyle(
-              color: AppColors.neutral600,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          const SizedBox(height: 8),
-          TextField(
-            controller: controller,
-            decoration: InputDecoration(
-              hintText: hint,
-              suffixIcon: icon == null
-                  ? null
-                  : IconButton(onPressed: onIconTap, icon: Icon(icon)),
-            ),
           ),
         ],
       ),

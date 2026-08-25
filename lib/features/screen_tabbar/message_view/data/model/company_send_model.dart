@@ -28,14 +28,14 @@ class CompanySendMessageModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['massage'] = this.massage;
-    data['user_id'] = this.userId;
-    data['comp_id'] = this.compId;
-    data['sender_user'] = this.senderUser;
-    data['updated_at'] = this.updatedAt;
-    data['created_at'] = this.createdAt;
-    data['id'] = this.id;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['massage'] = massage;
+    data['user_id'] = userId;
+    data['comp_id'] = compId;
+    data['sender_user'] = senderUser;
+    data['updated_at'] = updatedAt;
+    data['created_at'] = createdAt;
+    data['id'] = id;
     return data;
   }
 }

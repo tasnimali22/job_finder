@@ -16,18 +16,19 @@ import 'package:jobs_que_app/features/screen_tabbar/home-view/view/search/search
 import 'package:jobs_que_app/features/screen_tabbar/home-view/view/search/search_view/widget/result_screen.dart';
 import 'package:jobs_que_app/features/screen_tabbar/home-view/view/widget/detelis.dart/job_description.dart';
 import 'package:jobs_que_app/features/screen_tabbar/message_view/view/chat_page.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/Profile.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/Other/Terms&Conditions/Terms&Conditions.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/Other/PrivacyPolicy/PrivacyPolicy.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/Other/HelpCenter/HelpCenter.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/General/porfolioprofile/portfolioprofile.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/General/notification/notification.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/General/loginandsecurity/loginandsecurity.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/General/language/language.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/General/Editprofile/EditProfile.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/General/Editprofile/Complete_profile/Complete_profile.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/General/Editprofile/Complete_profile/Education_screen.dart';
-import 'package:jobs_que_app/features/screen_tabbar/profile/General/Editprofile/Complete_profile/Experience_screen.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/profile.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/other/termsconditions/termsconditions.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/other/privacy_policy/privacy_policy.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/other/helpcenter/help_center.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/porfolioprofile/portfolioprofile.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/notification/notification.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/loginandsecurity/loginandsecurity.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/language/language.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/edit_profile/edit_profile.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/edit_profile/complete_profile/complete_profile.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/edit_profile/complete_profile/education_screen.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/general/edit_profile/complete_profile/experience_screen.dart';
+import 'package:jobs_que_app/features/screen_tabbar/profile/widget/profile_routes.dart';
 
 abstract class AppRouter {
   static const String kintroduction = '/Introduction';
@@ -74,7 +75,7 @@ abstract class AppRouter {
       GoRoute(
         path: kHome,
         builder: (context, state) {
-          return BottomNavigaterBar();
+          return const BottomNavigaterBar();
         },
       ),
       GoRoute(
@@ -103,13 +104,13 @@ abstract class AppRouter {
       GoRoute(
         path: kDetailsSearch,
         builder: (context, state) {
-          return SearchResultScreen();
+          return const SearchResultScreen();
         },
       ),
       GoRoute(
         path: kapplysuccess,
         builder: (context, state) {
-          return JobUploadSuccess();
+          return const JobUploadSuccess();
         },
       ),
 

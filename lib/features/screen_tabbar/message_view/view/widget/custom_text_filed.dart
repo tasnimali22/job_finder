@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomTextFiled extends StatelessWidget {
   CustomTextFiled({
     this.onchanged,
@@ -19,15 +20,18 @@ class CustomTextFiled extends StatelessWidget {
         if (dats!.isEmpty) {
           return 'this filed is empty';
         }
+        return null;
       },
       onChanged: onchanged,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyle(color: Colors.white),
-        enabledBorder: OutlineInputBorder(
+        hintStyle: const TextStyle(color: Colors.white),
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.white),
         ),
-        border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+        border: const OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.white),
+        ),
       ),
     );
   }

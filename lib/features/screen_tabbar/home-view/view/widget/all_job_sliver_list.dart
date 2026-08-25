@@ -49,7 +49,7 @@ class CustomSliverList extends StatelessWidget {
         } else if (state is AllJobFailure) {
           return SliverToBoxAdapter(child: Text(state.errMessage));
         } else {
-          return SliverToBoxAdapter(child: CustomCircleIndicator());
+          return const SliverToBoxAdapter(child: CustomCircleIndicator());
         }
       },
     );

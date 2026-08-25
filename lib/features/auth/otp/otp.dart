@@ -24,14 +24,14 @@ class OtpScreen extends StatelessWidget {
             padding: EdgeInsets.only(right: 24.h, left: 24.h, bottom: 40.h),
             child: Column(
               children: [
-                CustomAppbarapply(text: 'Two-step verification'),
+                const CustomAppbarapply(text: 'Two-step verification'),
 
                 Text(
                   "Enter the 6 digit code",
                   style: AppTextStyles.textLMedium,
                 ),
 
-                Spacer(),
+                const Spacer(),
                 Text(
                   "Please confirm your account by entering the authorization code sen to : $email",
                   style: AppTextStyles.textMRegularn,
@@ -55,7 +55,7 @@ class OtpScreen extends StatelessWidget {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text("Verification Code"),
+                          title: const Text("Verification Code"),
                           content: Text('Code entered is $verificationCode'),
                         );
                       },
@@ -64,7 +64,7 @@ class OtpScreen extends StatelessWidget {
                 ),
                 Text("Resend Code", style: AppTextStyles.textSMediu),
 
-                Spacer(),
+                const Spacer(),
                 CustomBotton(
                   text: "Verify Code",
                   onPressed: () {
@@ -82,7 +82,7 @@ class OtpScreen extends StatelessWidget {
         listener: (BuildContext context, OtpTimerState state) {
           if (state is OtpTimerSucess) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text("Otp verified Successfully")),
+              const SnackBar(content: Text("Otp verified Successfully")),
             );
           } else if (state is OtpTimerFailre) {
             ScaffoldMessenger.of(context).showSnackBar(

@@ -27,7 +27,6 @@ class SearchCubit extends Cubit<SearchState> {
       }
       emit(SearchSuccessState(searchmodel: searchResults));
     } catch (e) {
-      print("$e");
       emit(SearchFalidedState(errMessage: e.toString()));
     }
   }

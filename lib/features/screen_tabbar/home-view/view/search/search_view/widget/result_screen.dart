@@ -30,7 +30,7 @@ class SearchResultScreen extends StatelessWidget {
           } else if (state is SearchFalidedState) {
             return Text(state.errMessage);
           } else {
-            return CustomCircleIndicator();
+            return const CustomCircleIndicator();
           }
         },
       ),

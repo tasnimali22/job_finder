@@ -44,6 +44,7 @@ class _NatificationState extends State<Natification> {
             contentPadding: EdgeInsets.zero,
             title: Text(item),
             value: _settings[item] ?? false,
+            // ignore: deprecated_member_use
             activeColor: AppColors.primary500,
             onChanged: (value) => _toggle(item, value),
           ),

@@ -12,7 +12,7 @@ class Searching extends StatelessWidget {
       onTap: () {
         GoRouter.of(context).push(AppRouter.kSearch);
       },
-      child: AbsorbPointer(child: CustomSearch(text: 'Search')),
+      child: const AbsorbPointer(child: CustomSearch(text: 'Search')),
     );
   }
 }

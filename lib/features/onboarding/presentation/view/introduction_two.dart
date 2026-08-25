@@ -16,14 +16,16 @@ class IntroductionTwo extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
       child: Column(
         children: [
-          CustomAppBar(),
+          const CustomAppBar(),
           Image.asset(AssetImageData.intro2, fit: BoxFit.contain),
-          Spacer(),
+          const Spacer(),
           RichText(
             text: TextSpan(
               style: AppTextStyles.heading1Medium,
               children: [
-                TextSpan(text: "Hundreds of jobs are waiting for you to "),
+                const TextSpan(
+                  text: "Hundreds of jobs are waiting for you to ",
+                ),
                 TextSpan(
                   text: "join together",
                   style: AppTextStyles.heading1Mediumb,
@@ -31,28 +33,28 @@ class IntroductionTwo extends StatelessWidget {
               ],
             ),
           ),
-          Spacer(),
+          const Spacer(),
 
           Text(
             "Immediately join us and start applying for the job you are interested in.",
             style: AppTextStyles.textLRegularN,
             textAlign: TextAlign.center,
           ),
-          Spacer(),
+          const Spacer(),
 
           CardSmoothPageIndictor(controller: controller),
-          Spacer(),
+          const Spacer(),
 
           CustomBotton(
             text: "Next",
             onPressed: () {
               controller.nextPage(
-                duration: Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 200),
                 curve: Curves.easeInOut,
               );
             },
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

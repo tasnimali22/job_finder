@@ -16,7 +16,7 @@ class CustomCircleIndicator extends StatelessWidget {
         child: ListView.builder(
           itemCount: 2,
           itemBuilder: (BuildContext context, int index) {
-            return Container(child: Text(""));
+            return const Text("");
           },
         ),
       ),

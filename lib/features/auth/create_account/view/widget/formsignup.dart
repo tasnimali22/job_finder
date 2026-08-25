@@ -15,7 +15,7 @@ class FormSignUp extends StatelessWidget {
       child: Column(
         children: [
           CustomTextFiled(
-            prefixIcon: Icon(Icons.person_outline_rounded),
+            prefixIcon: const Icon(Icons.person_outline_rounded),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return "Please enter your name";
@@ -27,7 +27,7 @@ class FormSignUp extends StatelessWidget {
           ),
 
           CustomTextFiled(
-            prefixIcon: Icon(Icons.email_outlined),
+            prefixIcon: const Icon(Icons.email_outlined),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return "Please enter your email";
@@ -50,10 +50,10 @@ class FormSignUp extends StatelessWidget {
               }
               return null;
             },
-            prefixIcon: Icon(Icons.lock_outlined),
+            prefixIcon: const Icon(Icons.lock_outlined),
             suffixIcon: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.remove_moderator_outlined),
+              icon: const Icon(Icons.remove_moderator_outlined),
             ),
             controller: context.read<SignUpCubit>().passwordController,
             hint: "Password",

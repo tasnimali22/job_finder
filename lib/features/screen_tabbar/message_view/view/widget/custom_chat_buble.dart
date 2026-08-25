@@ -11,9 +11,9 @@ class Chatbuble extends StatelessWidget {
     return Align(
       alignment: AlignmentGeometry.centerLeft,
       child: Container(
-        padding: EdgeInsets.all(16),
-        margin: EdgeInsets.all(8),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.all(8),
+        decoration: const BoxDecoration(
           color: AppColors.primary500,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(32),
@@ -23,7 +23,7 @@ class Chatbuble extends StatelessWidget {
         ),
         child: Text(
           message.massage ?? "",
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
       ),
     );

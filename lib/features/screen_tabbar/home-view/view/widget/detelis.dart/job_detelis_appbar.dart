@@ -9,9 +9,9 @@ class JobDetelisAppbar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
         Text("Job Detail", style: AppTextStyles.heading4Medium),
-        IconButton(onPressed: () {}, icon: Icon(Icons.bookmark)),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.bookmark)),
       ],
     );
   }

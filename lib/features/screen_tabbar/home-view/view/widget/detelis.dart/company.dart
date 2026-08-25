@@ -13,7 +13,7 @@ class Company extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Contact Us"),
+        const Text("Contact Us"),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

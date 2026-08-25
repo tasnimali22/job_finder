@@ -28,7 +28,7 @@ class CustomTextFiled extends StatelessWidget {
   Widget build(BuildContext context) {
     var outlineInputBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(10),
-      borderSide: BorderSide(color: AppColors.neutral400, width: 1),
+      borderSide: const BorderSide(color: AppColors.neutral400, width: 1),
     );
     return Padding(
       padding: EdgeInsets.only(
@@ -44,7 +44,7 @@ class CustomTextFiled extends StatelessWidget {
         decoration: InputDecoration(
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.red, width: 2),
+            borderSide: const BorderSide(color: Colors.red, width: 2),
           ),
           // errorStyle: TextStyle(color: Colors.white)
           // label: Text(title!, style: TextStyle(color: Color(0xFF3F80FF))),
@@ -54,11 +54,11 @@ class CustomTextFiled extends StatelessWidget {
 
           fillColor: AppColors.danger100,
           hintText: hint,
-          hintStyle: TextStyle(color: AppColors.neutral400),
+          hintStyle: const TextStyle(color: AppColors.neutral400),
           enabledBorder: outlineInputBorder,
 
           focusedBorder: outlineInputBorder.copyWith(
-            borderSide: BorderSide(color: AppColors.primary400),
+            borderSide: const BorderSide(color: AppColors.primary400),
           ),
         ),
       ),

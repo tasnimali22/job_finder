@@ -20,11 +20,11 @@ class StepperStep extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // الألوان بناءً على الحالة
-    final Color activeColor =
+    const Color activeColor =
         AppColors.primary500; // اللون الأزرق للخطوات النشطة
-    final Color inactiveColor =
+    const Color inactiveColor =
         AppColors.neutral300; // اللون الرمادي للخطوات غير النشطة
-    final Color textColor = AppColors.neutral500; // لون النص الرمادي الداكن
+    const Color textColor = AppColors.neutral500; // لون النص الرمادي الداكن
 
     return Column(
       children: [

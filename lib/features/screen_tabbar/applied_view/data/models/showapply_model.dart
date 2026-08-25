@@ -46,20 +46,20 @@ class ShowApplayModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['email'] = this.email;
-    data['mobile'] = this.mobile;
-    data['work_type'] = this.workType;
-    data['cv_file'] = this.cvFile;
-    data['other_file'] = this.otherFile;
-    data['jobs_id'] = this.jobsId;
-    data['user_id'] = this.userId;
-    data['reviewed'] = this.reviewed;
-    data['accept'] = this.accept;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['email'] = email;
+    data['mobile'] = mobile;
+    data['work_type'] = workType;
+    data['cv_file'] = cvFile;
+    data['other_file'] = otherFile;
+    data['jobs_id'] = jobsId;
+    data['user_id'] = userId;
+    data['reviewed'] = reviewed;
+    data['accept'] = accept;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }

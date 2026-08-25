@@ -1,6 +1,5 @@
 part of 'suggest_cubit.dart';
 
-@immutable
 sealed class SuggestState {}
 
 final class SuggestInitial extends SuggestState {}

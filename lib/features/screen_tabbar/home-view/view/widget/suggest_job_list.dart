@@ -47,7 +47,7 @@ class SuggestJobList extends StatelessWidget {
           } else if (state is SuggestFailure) {
             return Text(state.errMassage);
           } else {
-            return CustomCircleIndicator();
+            return const CustomCircleIndicator();
           }
         },
       ),

@@ -29,7 +29,7 @@ class CustomDefaultTabController extends StatelessWidget {
         ),
         child: Column(
           children: [
-            JobDetelisAppbar(),
+            const JobDetelisAppbar(),
             CachedNetworkImage(
               imageUrl: details.image ?? "",
               fit: BoxFit.contain,
@@ -54,7 +54,10 @@ class CustomDefaultTabController extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 24.h),
-              child: CustomCardTapBar(tap1: 'Describtion', tap2: 'Company'),
+              child: const CustomCardTapBar(
+                tap1: 'Describtion',
+                tap2: 'Company',
+              ),
             ),
             Expanded(
               child: TabBarView(
@@ -67,10 +70,9 @@ class CustomDefaultTabController extends StatelessWidget {
             CustomBotton(
               text: "Apply Now",
               onPressed: () {
-                GoRouter.of(context).push(
-                  AppRouter.kApplyJob,
-                  extra: details.id,
-                );
+                GoRouter.of(
+                  context,
+                ).push(AppRouter.kApplyJob, extra: details.id);
               },
             ),
           ],

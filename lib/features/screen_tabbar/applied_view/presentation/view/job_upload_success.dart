@@ -16,7 +16,7 @@ class JobUploadSuccess extends StatelessWidget {
         padding: EdgeInsets.only(left: 24.w, right: 24.w),
         child: Column(
           children: [
-            CustomAppbarapply(text: 'Apply Job'),
+            const CustomAppbarapply(text: 'Apply Job'),
             SizedBox(height: 50.h),
             Center(
               child: Image.asset(AssetImageData.success, fit: BoxFit.contain),

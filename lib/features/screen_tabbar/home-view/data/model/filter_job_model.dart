@@ -61,25 +61,25 @@ class FilterJobModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['image'] = this.image;
-    data['job_time_type'] = this.jobTimeType;
-    data['job_type'] = this.jobType;
-    data['job_level'] = this.jobLevel;
-    data['job_description'] = this.jobDescription;
-    data['job_skill'] = this.jobSkill;
-    data['comp_name'] = this.compName;
-    data['comp_email'] = this.compEmail;
-    data['comp_website'] = this.compWebsite;
-    data['about_comp'] = this.aboutComp;
-    data['location'] = this.location;
-    data['salary'] = this.salary;
-    data['favorites'] = this.favorites;
-    data['expired'] = this.expired;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['image'] = image;
+    data['job_time_type'] = jobTimeType;
+    data['job_type'] = jobType;
+    data['job_level'] = jobLevel;
+    data['job_description'] = jobDescription;
+    data['job_skill'] = jobSkill;
+    data['comp_name'] = compName;
+    data['comp_email'] = compEmail;
+    data['comp_website'] = compWebsite;
+    data['about_comp'] = aboutComp;
+    data['location'] = location;
+    data['salary'] = salary;
+    data['favorites'] = favorites;
+    data['expired'] = expired;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }

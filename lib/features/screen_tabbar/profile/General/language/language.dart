@@ -41,7 +41,9 @@ class _LanguagesState extends State<Languages> {
               padding: const EdgeInsets.only(bottom: 10),
               child: RadioListTile<String>(
                 value: language.name,
+                // ignore: deprecated_member_use
                 groupValue: _selectedLanguage,
+                // ignore: deprecated_member_use
                 onChanged: (value) {
                   if (value == null) return;
                   setState(() => _selectedLanguage = value);

@@ -18,7 +18,7 @@ class CustomAppbarapply extends StatelessWidget {
             onPressed: () {
               GoRouter.of(context).pop();
             },
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
           ),
           SizedBox(width: 80.w),
           Center(
