@@ -1,17 +1,58 @@
 # jobs_que_app
+# Jobsque – Job Finder App
 
-A new Flutter project.
+A Flutter mobile application that helps users discover jobs, view job details, and apply for available positions.
+
+## Technologies
+
+* Flutter
+* Dart
+* Bloc / Cubit
+* REST APIs
+* HTTP
+* Shared Preferences
+* Responsive UI
+
+## Architecture
+
+The application follows a structured and maintainable architecture with separation between presentation, data, and business logic.
+
+## Screenshots
+
+Add screenshots of the main application screens here.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+* Flutter SDK
+* Android Studio or VS Code
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone YOUR_REPOSITORY_LINK
+cd jobsque
+flutter pub get
+flutter run
+```
+
+## Project Structure
+
+```text
+lib/
+├── core/
+├── features/
+│   ├── auth/
+│   ├── bottom_navation_bar/
+│   ├── onboarding/
+│   └── screen_tapbar/
+└── main.dart
+```
+
+## Author
+
+**Tasnim Ali Elabd**
+
+Flutter Developer
+Tanta, Gharbia, Egypt
